@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copilot + ChatGPT Enterprise — Feature Delta · 2026-09-23</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #555; --accent: #1a5fb4; --bg: #fafaf7; --code-bg: #eef1f5; --rule: #d3d8e0; }
+  html { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--fg); background: var(--bg); }
+  body { max-width: 920px; margin: 2rem auto 4rem; padding: 0 1.5rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; border-bottom: 2px solid var(--fg); padding-bottom: .4rem; margin-bottom: 0; }
+  .subtitle { color: var(--muted); margin-top: .3rem; font-size: .95rem; }
+  h2 { margin-top: 2.4rem; font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .88rem; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: .92rem; }
+  th, td { padding: .45rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .callout { background: #e8f0fb; border-left: 3px solid #1a5fb4; padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; }
+  .empty { background: var(--code-bg); padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; color: var(--muted); }
+  .footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>Copilot + ChatGPT Enterprise — Feature Delta <span class="subtitle">2026-09-23 · Wed/Sat brief</span></h1>
+
+<div class="callout">
+Quiet week on the Copilot side for the GCC tenant: the only dated in-window signal is Microsoft's 2026-09-15 government roadmap post, which names features <em>coming</em> to GCC/GCC High/DoD but does not confirm any new GA landing today. ChatGPT Enterprise is the opposite — OpenAI shipped the GPT-6 model wave on 2026-09-22 (Astra, Sol, Luna) with Astra <strong>off by default</strong> and requiring workspace-owner opt-in.
+</div>
+
+<div class="empty">
+Source note: the Microsoft 365 public roadmap JSON feed (<code>releasecommunications/api/v1/m365</code>) and its RSS mirror returned HTTP 403 for every fetch path this run (godmode HTTP, python urllib, WebFetch). The Copilot section below is built from the Microsoft Learn release-notes page and the Public Sector Blog, both of which are well-dated but do not carry roadmap IDs or <code>cloudInstances</code> arrays. GCC tags are taken verbatim from the government blog post's own scope claims, not from the roadmap feed. openai.com/products/release-notes and the OpenAI announcement pages also 403'd; ChatGPT items are built from WebSearch snippets against <code>help.openai.com</code> and <code>openai.com</code>, cross-checked across two queries.
+</div>
+
+<h2>Microsoft 365 Copilot (GCC tenant)</h2>
+
+<p>One dated in-window Copilot-for-government post. The features it names are announcements of planned rollout, not GA confirmations — tagged Preview / Announced accordingly.</p>
+
+<table>
+  <thead><tr><th>Date</th><th>Feature</th><th>GCC status</th><th>Phase</th><th>Roadmap/Source</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Microsoft 365 G7 for GCC</strong> — new government SKU bundling productivity, Copilot, agents, security, identity, compliance, and governance in one offering.</td>
+      <td>✅ GCC (announced for GCC in the post)</td>
+      <td>Announced</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Memory and personalization in Copilot</strong> — Copilot retains user preferences and prior context across sessions.</td>
+      <td>✅ GCC (also GCC High, DoD per post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Edit with Copilot</strong> in Word, Excel, and PowerPoint — in-app edit mode for the government clouds.</td>
+      <td>✅ GCC (also GCC High, DoD per post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Expanded Copilot Chat in Outlook</strong> for the government clouds.</td>
+      <td>✅ GCC (also GCC High, DoD per post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Copilot Notebooks redesign</strong> — revamped UX with side-by-side references, Pages, and chats.</td>
+      <td>✅ GCC (also GCC High, DoD per post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Copilot in Forms</strong> — Copilot-assisted form authoring for the government clouds.</td>
+      <td>✅ GCC (also GCC High, DoD per post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>Intelligent meeting recap</strong> for Teams — extended to DoD.</td>
+      <td>🔶 GCC High / DoD only (DoD called out in post)</td>
+      <td>Preview / Coming</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-15</td>
+      <td><strong>GPT-5.6 backing Copilot</strong> — Microsoft names GPT-5.6 as the model expanding drafting, summarization, research, and multi-step reasoning inside Copilot for government.</td>
+      <td>✅ GCC (implied via the post's overall scope)</td>
+      <td>Announced</td>
+      <td><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">Public Sector Blog 4555457</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Pipeline watch:</strong> the Copilot Notebooks redesign and Memory/personalization are the two items with the largest end-user surface change for GCC when they land — plan support content ahead of the tenant rollout.</p>
+
+<h2>ChatGPT Enterprise</h2>
+
+<table>
+  <thead><tr><th>Date</th><th>Feature</th><th>Scope</th><th>State</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>2026-09-22</td>
+      <td><strong>GPT-6 Astra</strong> — new frontier model, state-of-the-art on computer use, browsing, software engineering, cybersecurity, and professional work. In Enterprise/Edu it is <strong>off by default</strong>; workspace owners enable it via model access controls, per-workspace or per-role. The usual two-week admin preview auto-enable does <em>not</em> apply.</td>
+      <td>Admin + User</td>
+      <td>Rolling out (limited orgs first, then Plus/Pro/Business/Enterprise/Edu)</td>
+      <td><a href="https://openai.com/index/gpt-6-astra/">openai.com/index/gpt-6-astra</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-22</td>
+      <td><strong>GPT-6 Sol and GPT-6 Luna</strong> — faster/cheaper siblings to Astra, available in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise, and Edu on day one; Luna is also in the free desktop app. API prices for Sol/Luna cut 50% vs. the GPT-5.6 promotional rates.</td>
+      <td>User (API pricing = Admin-relevant)</td>
+      <td>Rolling out / GA in Work + Codex</td>
+      <td><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/">openai.com/index/introducing-gpt-6-sol-and-luna</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-22</td>
+      <td><strong>New Astra admin controls</strong> — workspace admins can restrict Astra to approved websites and desktop apps, manage uploads/downloads, and control browsing history.</td>
+      <td>Admin</td>
+      <td>GA with Astra rollout</td>
+      <td><a href="https://openai.com/index/gpt-6-astra/">openai.com/index/gpt-6-astra</a></td>
+    </tr>
+    <tr>
+      <td>2026-09-14</td>
+      <td><strong>GPT-5.3-Codex-Spark deprecated</strong> — research preview removed from the ChatGPT desktop app, Codex CLI, and IDE extension.</td>
+      <td>User (developer surface)</td>
+      <td>GA (deprecation)</td>
+      <td><a href="https://developers.openai.com/codex/changelog">developers.openai.com/codex/changelog</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Betas &amp; Previews Worth Tracking</h2>
+
+<ul>
+  <li><strong>GPT-6 Astra rollout (ChatGPT Enterprise)</strong> — limited-org rollout on 2026-09-22, expanding to all Enterprise workspaces "over the coming days"; off by default, admin opt-in required. Decide the workspace posture (deny / allow to a role / broad enable) before end users notice it in the model picker.</li>
+  <li><strong>Copilot Notebooks redesign for government clouds</strong> — announced 2026-09-15; side-by-side references, Pages, and chats. No GA date confirmed in the post.</li>
+  <li><strong>Memory and personalization in Copilot for GCC / GCC High / DoD</strong> — announced 2026-09-15; carries policy implications (retention, admin controls over per-user memory) worth reviewing before enablement.</li>
+</ul>
+
+<h2>Sources</h2>
+
+<h3>Microsoft 365 Copilot (GCC)</h3>
+<ul>
+  <li><a href="https://techcommunity.microsoft.com/blog/publicsectorblog/whats-next-in-microsoft-365-copilot-for-government/4555457">What's Next in Microsoft 365 Copilot for Government</a> — Public Sector Blog, 2026-09-15.</li>
+  <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Release Notes for Microsoft 365 Copilot</a> — Microsoft Learn; latest dated entry inside content is 2026-08-25 (no in-window entries as of this run).</li>
+  <li><a href="https://www.microsoft.com/releasecommunications/api/v1/m365">Microsoft 365 public roadmap JSON feed</a> — <em>UNAVAILABLE this run</em>: HTTP 403 on all fetch paths; GCC tagging above is from the blog post's own claims, not from <code>cloudInstances</code>.</li>
+</ul>
+
+<h3>ChatGPT Enterprise</h3>
+<ul>
+  <li><a href="https://openai.com/index/gpt-6-astra/">GPT-6 Astra: A new generation of intelligence</a> — 2026-09-22 (per search snippets; page itself 403'd, dated consistently across two independent queries).</li>
+  <li><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/">Introducing GPT-6 Sol and Luna</a> — 2026-09-22.</li>
+  <li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu — Release Notes</a> — primary Enterprise changelog (Cloudflare-gated; used via search).</li>
+  <li><a href="https://developers.openai.com/codex/changelog">ChatGPT &amp; Codex changelog</a> — 2026-09-14 entry on GPT-5.3-Codex-Spark deprecation.</li>
+  <li><a href="https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex">Managing usage with GPT-6 Astra in Work and Codex</a> — help article referenced in Astra launch.</li>
+</ul>
+
+<div class="footer">
+Auto-generated by <code>~/Projects/copilot-chatgpt-feature-brief/generate.sh</code>, twice weekly (Wed + Sat 07:00). GCC availability is read from the public Microsoft 365 roadmap feed and reflects Microsoft's published rollout, not the tenant's admin message center — verify with Message Center before communicating a live date to end users. This run fell back to the Microsoft Learn release-notes page and the Public Sector Blog because the roadmap JSON feed returned 403; GCC tags in the Copilot table were taken from the source post's own scope claims.
+</div>
+</body>
+</html>

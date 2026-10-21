@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Copilot + ChatGPT Enterprise — Feature Delta · 2026-08-05</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #555; --accent: #1a5fb4; --bg: #fafaf7; --code-bg: #eef1f5; --rule: #d3d8e0; }
+  html { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--fg); background: var(--bg); }
+  body { max-width: 920px; margin: 2rem auto 4rem; padding: 0 1.5rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; border-bottom: 2px solid var(--fg); padding-bottom: .4rem; margin-bottom: 0; }
+  .subtitle { color: var(--muted); margin-top: .3rem; font-size: .95rem; }
+  h2 { margin-top: 2.4rem; font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .88rem; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: .92rem; }
+  th, td { padding: .45rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .callout { background: #e8f0fb; border-left: 3px solid #1a5fb4; padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; }
+  .empty { background: var(--code-bg); padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; color: var(--muted); }
+  .footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Copilot + ChatGPT Enterprise — Feature Delta <span class="subtitle">2026-08-05 · Wed/Sat brief</span></h1>
+
+<div class="callout">
+Two items landed for the GCC tenant this window that matter for admins: Purview DLP for M365 Copilot prompts is <strong>rolling out in GCC / GCC High / DoD</strong> (Roadmap 561892), and <strong>custom engine agents</strong> are dated for GCC-M in August 2026 (Roadmap 501111). On ChatGPT Enterprise, the release-notes source was thin — only two dated entries fell inside the 10-day cap.
+</div>
+
+<h2>Microsoft 365 Copilot (GCC tenant)</h2>
+
+<p>Read from the public M365 roadmap JSON feed on 2026-08-05. Dates are the roadmap <code>modified</code> timestamp. GCC status reflects Microsoft's published <code>cloudInstances</code>, not the tenant's message center.</p>
+
+<table>
+<thead>
+<tr><th>Date</th><th>Feature</th><th>GCC status</th><th>Phase</th><th>Roadmap</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>2026-08-04</td>
+  <td>Copilot memory in Researcher — carries context from prior Researcher sessions into new ones</td>
+  <td>⏳ Not yet in GCC</td>
+  <td>GA (Nov 2026, WW)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=562996">562996</a></td>
+</tr>
+<tr>
+  <td>2026-08-03</td>
+  <td>Teams: admins can customize the recording &amp; transcription notification text shown to users on calls</td>
+  <td>✅ GCC / GCC High / DoD</td>
+  <td>Rolling out — GA + Targeted Release</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=567302">567302</a></td>
+</tr>
+<tr>
+  <td>2026-08-03</td>
+  <td>Viva Glint: Copilot admin configuration assistant, embedded in the Glint admin console with deep links</td>
+  <td>✅ GCC</td>
+  <td>GA (Sept 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=567320">567320</a></td>
+</tr>
+<tr>
+  <td>2026-07-31</td>
+  <td>OneNote: multimodal capture (audio, image, notes) in Copilot Notebooks on Windows</td>
+  <td>⏳ Not yet in GCC</td>
+  <td>GA (Aug 2026, WW)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=566322">566322</a></td>
+</tr>
+<tr>
+  <td>2026-07-31</td>
+  <td>Custom engine agents for M365 Copilot enabled for GCC-M users</td>
+  <td>✅ GCC</td>
+  <td>GA (Aug 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=501111">501111</a></td>
+</tr>
+<tr>
+  <td>2026-07-31</td>
+  <td>Custom engine agents also enabled for GCC High (503771) and DoD (503772)</td>
+  <td>🔶 GCC High / DoD only</td>
+  <td>GA (Aug 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=503771">503771</a> / <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=503772">503772</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td>Purview DLP: block M365 Copilot &amp; Copilot Chat from using sensitive data in external web search</td>
+  <td>✅ GCC / GCC High / DoD</td>
+  <td>GA (dated July 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=565870">565870</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td>Purview DLP: block Copilot responses when the prompt itself contains sensitive data (gov clouds)</td>
+  <td>✅ GCC / GCC High / DoD</td>
+  <td>GA — Rolling out (June 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=561892">561892</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td>Facilitator agent for in-person meetings in Teams Rooms on Windows: notes, decisions, actions on the room console</td>
+  <td>✅ GCC / GCC High / DoD</td>
+  <td>GA (Sept 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=560318">560318</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td>Facilitator agent for in-person meetings in Teams Rooms on Android</td>
+  <td>✅ GCC / GCC High</td>
+  <td>GA (Sept 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=560700">560700</a></td>
+</tr>
+<tr>
+  <td>2026-07-28</td>
+  <td>MCP-based agents in Copilot Chat can surface interactive UI widgets — enabled for gov clouds</td>
+  <td>✅ GCC / GCC High / DoD</td>
+  <td>GA (Aug 2026)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=564608">564608</a></td>
+</tr>
+<tr>
+  <td>2026-07-28</td>
+  <td>Outlook emails as references in Copilot Notebooks — ground Copilot in email content</td>
+  <td>⏳ Not yet in GCC</td>
+  <td>Preview — Rolling out (June 2026, WW)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=564910">564910</a></td>
+</tr>
+<tr>
+  <td>2026-07-28</td>
+  <td>Planner Agent: AI-generated status reports from plan data (narrative, risks, next steps)</td>
+  <td>⏳ Not yet in GCC</td>
+  <td>Preview (Aug 2026, WW)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=567886">567886</a></td>
+</tr>
+<tr>
+  <td>2026-07-28</td>
+  <td>Purview DLP: Security Copilot generates natural-language explanations of DLP policy changes</td>
+  <td>⏳ Not yet in GCC</td>
+  <td>Preview (Sept 2026, WW)</td>
+  <td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=559106">559106</a></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Pipeline watch:</strong> two Researcher features dated 2026-08-04 — <em>Critique</em> (GPT drafts, Claude reviews for accuracy and citation integrity, Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=558538">558538</a>) and <em>Researcher Council</em> (multiple leading models run in parallel with side-by-side comparison, Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=553213">553213</a>) — are the most significant items still tagged Worldwide only. Both are in Preview. No GCC date yet.</p>
+
+<h2>ChatGPT Enterprise</h2>
+
+<p>Read from the authoritative help.openai.com release-notes fetch appended to today's prompt. The Enterprise/Edu and Business release-note sources returned <code>UNAVAILABLE</code> in the fetch, so only the shared ChatGPT release-notes page contributed dated entries — coverage is thin this window.</p>
+
+<table>
+<thead>
+<tr><th>Date</th><th>Feature</th><th>Scope</th><th>State</th><th>Source</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td>2026-07-31</td>
+  <td>Official DALL·E GPT retires on 2026-08-30 — download images to keep them; user-built GPTs with image generation are unaffected. Image work moves to ChatGPT Images.</td>
+  <td>User (all plans)</td>
+  <td>Announced (deprecation)</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td>ChatGPT for Academic Researchers — dedicated workspace program for faculty/postdoc teams (up to 5 members, SheerID verification, business data protections). Existing Edu institutions get an institution-managed route.</td>
+  <td>Workspace / Admin</td>
+  <td>GA (application-based)</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-07-29</td>
+  <td><em>Sign in with ChatGPT</em> — federated sign-in beginning to roll out to select plugins and partner sites (Airtable, GitLab, HubSpot, Notion listed).</td>
+  <td>User / Workspace-relevant</td>
+  <td>Rolling out (partial)</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+</tbody>
+</table>
+
+<p class="empty">Enterprise &amp; Edu and Business release-notes pages timed out in today's browser fetch — no Enterprise-specific admin, SCIM, connector, or MCP-actions changes are dated inside the window from those sources. Next brief will re-attempt.</p>
+
+<h2>Betas &amp; Previews Worth Tracking</h2>
+
+<ul>
+  <li><strong>Researcher — Critique</strong> (Copilot, Preview, dated 2026-08-04). Dual-model drafting/review inside Researcher. Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=558538">558538</a>.</li>
+  <li><strong>Researcher — Council</strong> (Copilot, Preview + Targeted Release, 2026-08-04). Parallel multi-model comparison. Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=553213">553213</a>.</li>
+  <li><strong>Planner Agent — AI-generated Status Reports</strong> (Copilot, Preview Aug 2026, 2026-07-28). Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=567886">567886</a>.</li>
+  <li><strong>Outlook Emails as References in Copilot Notebooks</strong> (Copilot, Preview + Rolling out, 2026-07-28). Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=564910">564910</a>.</li>
+  <li><strong>Purview DLP Policy Change Insights with Security Copilot</strong> (Copilot, Preview Sept 2026, 2026-07-28). Roadmap <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=559106">559106</a>.</li>
+  <li><strong>Sign in with ChatGPT</strong> (ChatGPT, rolling out to select partners, 2026-07-29). See ChatGPT release notes above.</li>
+</ul>
+
+<h2>Sources</h2>
+
+<p><strong>Microsoft 365 Copilot (GCC)</strong></p>
+<ul>
+  <li><a href="https://www.microsoft.com/releasecommunications/api/v1/m365">M365 public roadmap JSON feed</a> — fetched 2026-08-05, 1810 items; 35 Copilot-tagged items with <code>modified</code> or <code>created</code> ≥ 2026-07-26.</li>
+  <li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Microsoft 365 Copilot release notes (Learn)</a> — used for cross-reference on feature phrasing; no in-window entries added independent of the roadmap this run.</li>
+</ul>
+
+<p><strong>ChatGPT Enterprise (OpenAI)</strong></p>
+<ul>
+  <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes (shared)</a> — dated entries 2026-07-31, 2026-07-29.</li>
+  <li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu release notes</a> — <code>UNAVAILABLE</code> in today's fetch.</li>
+  <li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">ChatGPT Business release notes</a> — <code>UNAVAILABLE</code> in today's fetch.</li>
+</ul>
+
+<div class="footer">
+Generated by <code>~/Projects/copilot-chatgpt-feature-brief/generate.sh</code>, twice weekly (Wed + Sat 07:00). GCC availability is read from the public M365 roadmap feed and reflects Microsoft's published rollout, not the tenant's admin message center. Verify tenant activation in the M365 admin center before communicating dates to end users.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copilot + ChatGPT Enterprise — Feature Delta 2026-09-09</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #555; --accent: #1a5fb4; --bg: #fafaf7; --code-bg: #eef1f5; --rule: #d3d8e0; }
+  html { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--fg); background: var(--bg); }
+  body { max-width: 920px; margin: 2rem auto 4rem; padding: 0 1.5rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; border-bottom: 2px solid var(--fg); padding-bottom: .4rem; margin-bottom: 0; }
+  .subtitle { color: var(--muted); margin-top: .3rem; font-size: .95rem; }
+  h2 { margin-top: 2.4rem; font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .88rem; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: .92rem; }
+  th, td { padding: .45rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .callout { background: #e8f0fb; border-left: 3px solid #1a5fb4; padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; }
+  .empty { background: var(--code-bg); padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; color: var(--muted); }
+  .footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Copilot + ChatGPT Enterprise — Feature Delta <span class="subtitle">2026-09-09 · Wed/Sat brief</span></h1>
+
+<div class="callout">
+Nothing new landed for Microsoft 365 Copilot in the GCC tenant this run — the last dated Copilot release-note entries are 2026-08-25, outside the 10-day window. ChatGPT movement is Enterprise-adjacent rather than Enterprise-specific: <strong>GPT-6 Astra</strong> is in a limited org rollout (not GA), and <strong>Zendesk and OneNote plugins</strong> shipped as Beta in the plugin directory.
+</div>
+
+<h2>Microsoft 365 Copilot (GCC tenant)</h2>
+
+<p>No Copilot roadmap or release-note entries carry a <code>modified</code> or publish date on or after 2026-08-30 that could be verified this run. The Microsoft 365 public roadmap JSON feed returned HTTP 403 from every fetch path attempted (<code>mcp__godmode__http_request</code>, <code>mcp__fetch</code>, <code>WebFetch</code>) — items were not read directly. The Learn release-notes page's most recent dated entries are 2026-08-25 (Excel Python edit, Copilot Notebooks UX refresh, Viva Engage private content grounding, Organizational Messages on hybrid-joined devices) — all fall outside the 10-day cap. No dated Public Sector Blog post landed in the window.</p>
+
+<div class="empty">No in-window Copilot items to report. Feed is confirmed unreachable this run rather than confirmed empty — treat this section as <em>unverified</em>, not <em>quiet</em>. If GCC availability changes are important this cycle, spot-check the Message Center in the tenant admin portal.</div>
+
+<p><strong>Pipeline watch:</strong> nothing to flag — no ⏳ Not-yet-in-GCC item was read from the roadmap feed this run.</p>
+
+<h2>ChatGPT Enterprise</h2>
+
+<p>Source of record for the entries below: OpenAI's help.openai.com release-note pages (Business + shared), fetched via headless browser earlier today. The Enterprise &amp; Edu release-note page itself timed out on that fetch and WebSearch fallback returned no dated in-window Enterprise-specific entries — so Enterprise-admin coverage is thin this run. What follows is Business + shared-plan movement that admins running an Enterprise workspace should still know about.</p>
+
+<table>
+<thead><tr><th>Date</th><th>Feature</th><th>Scope</th><th>State</th><th>Source</th></tr></thead>
+<tbody>
+<tr>
+  <td>2026-09-08</td>
+  <td>ChatGPT Images 2.5 — templates, sketch-to-image (mobile), full-screen edit and comment, prompt sharing.</td>
+  <td>User</td>
+  <td>Rolling out; templates not yet in Work mode.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-09-03</td>
+  <td>GPT-6 Astra — new model targeting coding, research, computer use, and multi-step document/spreadsheet/deck generation; adds safety pauses when agent intent is unclear.</td>
+  <td>Workspace</td>
+  <td>Limited rollout to a small set of orgs; not GA.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-09-03</td>
+  <td>Zendesk plugin (ticket review, knowledge lookup, reply drafting) and OneNote plugin (summarize, extract decisions/action items, create/update notes) added to the plugin directory for ChatGPT and Codex; members connect their own accounts.</td>
+  <td>Workspace</td>
+  <td>Beta.</td>
+  <td><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">Business release notes</a></td>
+</tr>
+<tr>
+  <td>2026-09-01</td>
+  <td>Healthcare Public Data plugin — nine read-only apps (biomedical research, clinical trials, medication info, Medicare data, provider records) for ChatGPT for Clinicians; no PHI in queries.</td>
+  <td>User (vertical)</td>
+  <td>GA for eligible U.S. Clinicians tenants.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-08-31</td>
+  <td>Website tools in the desktop browser — ChatGPT Work and Codex can invoke tools that supported sites expose directly, without a separate connector.</td>
+  <td>Workspace</td>
+  <td>Rolling out on desktop.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-08-31</td>
+  <td>Live voice content on iPhone Lock Screen and Dynamic Island (Live Activities); requires Background conversations on.</td>
+  <td>User</td>
+  <td>Rolling out on iOS.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+<tr>
+  <td>2026-08-31</td>
+  <td>Personalized sticker packs from prompt, template, or photo; export or send to iMessage / WhatsApp on supported devices.</td>
+  <td>User</td>
+  <td>GA globally on mobile.</td>
+  <td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2>Betas &amp; Previews Worth Tracking</h2>
+
+<ul>
+<li><strong>GPT-6 Astra</strong> (ChatGPT, 2026-09-03) — limited-org rollout, not GA. Watch for Enterprise availability language before assuming access, and note the built-in safety pauses on ambiguous agent instructions.</li>
+<li><strong>Zendesk and OneNote plugins</strong> (ChatGPT / Codex plugin directory, 2026-09-03) — Beta. Members connect their own Zendesk/OneNote accounts, so admin scope on the workspace plugin allowlist is the relevant control.</li>
+<li><strong>ChatGPT Images 2.5 templates</strong> (2026-09-08) — Work mode does not have templates yet; the rest of Images 2.5 (sketch input, full-screen edit, prompt sharing) is rolling out.</li>
+<li><strong>Copilot side</strong> — nothing to list; roadmap feed 403 this run.</li>
+</ul>
+
+<h2>Sources</h2>
+
+<p><strong>Microsoft 365 Copilot</strong></p>
+<ul>
+<li><a href="https://www.microsoft.com/releasecommunications/api/v1/m365">M365 public roadmap JSON feed</a> — <em>HTTP 403 from all fetch paths this run; not read.</em></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Learn: Release notes for Microsoft 365 Copilot</a> — page <code>ms.date: 2026-09-03</code>; most recent dated feature entries 2026-08-25.</li>
+<li><a href="https://techcommunity.microsoft.com/blog/publicsectorblog">Microsoft Public Sector Blog</a> — most recent Copilot-for-Government post found dates to 2026-04 (<a href="https://techcommunity.microsoft.com/blog/publicsectorblog/continuing-our-momentum-expanding-microsoft-365-copilot-capabilities-across-u-s-/4506954">Continuing our momentum</a>); nothing in window.</li>
+</ul>
+
+<p><strong>ChatGPT (OpenAI)</strong></p>
+<ul>
+<li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT — Release Notes</a> (headless-browser fetch 2026-09-09; entries 2026-08-31 → 2026-09-08 used).</li>
+<li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">ChatGPT Business — Release Notes</a> (headless-browser fetch 2026-09-09; 2026-09-03 Zendesk/OneNote entry used).</li>
+<li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu — Release Notes</a> — <em>page timeout on today's fetch; WebSearch fallback returned no dated in-window Enterprise-specific entries.</em></li>
+</ul>
+
+<div class="footer">
+Auto-generated by <code>~/Projects/copilot-chatgpt-feature-brief/generate.sh</code>, twice weekly (Wed + Sat 07:00). GCC availability is read from the public M365 roadmap feed and reflects Microsoft's published rollout, not the tenant's admin Message Center — spot-check Message Center for tenant-scoped changes. This run: Copilot roadmap feed unreachable (HTTP 403) and Enterprise &amp; Edu release notes page timed out; Copilot section and Enterprise-admin coverage are thin as a result, not empty by verification.
+</div>
+
+</body>
+</html>
