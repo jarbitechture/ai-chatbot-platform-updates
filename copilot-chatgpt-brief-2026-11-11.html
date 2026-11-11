@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copilot + ChatGPT Enterprise — Feature Delta 2026-11-11</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #555; --accent: #1a5fb4; --bg: #fafaf7; --code-bg: #eef1f5; --rule: #d3d8e0; }
+  html { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--fg); background: var(--bg); }
+  body { max-width: 920px; margin: 2rem auto 4rem; padding: 0 1.5rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; border-bottom: 2px solid var(--fg); padding-bottom: .4rem; margin-bottom: 0; }
+  .subtitle { color: var(--muted); margin-top: .3rem; font-size: .95rem; }
+  h2 { margin-top: 2.4rem; font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .88rem; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: .92rem; }
+  th, td { padding: .45rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .callout { background: #e8f0fb; border-left: 3px solid #1a5fb4; padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; }
+  .empty { background: var(--code-bg); padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; color: var(--muted); }
+  .footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Copilot + ChatGPT Enterprise — Feature Delta</h1>
+<div class="subtitle">2026-11-11 · Wed/Sat brief · window 2026-11-01 → 2026-11-11</div>
+
+<div class="callout">
+Six M365 Copilot items landed in GCC (or GCC + GCC High + DoD) this window, the largest run since the 10-07 batch. The two that matter most for the Manatee tenant: <strong>Federated Copilot Connectors</strong> reaching GCC/GCC High/DoD (GA) and <strong>MCP-based agent enablement for U.S. Government Clouds</strong> (GA) — both unlock third-party content and agent extensibility paths that were commercial-only through October. Separately, <strong>Viva Insights + Copilot Analytics</strong> are now listed GA for GCC and GCC High. On the ChatGPT side the window was quiet for admins: one consumer voice-model retirement notice (GPT-Live supersedes Advanced/Standard Voice on 2026-12-11) and the Images 2.6 model. No Enterprise/Edu admin items were dated inside the window from available sources — the authoritative Enterprise &amp; Edu release-notes page timed out and the Business page was unavailable; WebSearch fallback was used for cross-checking only.
+</div>
+
+<h2>Microsoft 365 Copilot (GCC tenant)</h2>
+<p>Items pulled from the M365 public roadmap JSON (<code>modified</code> inside the window). GCC status is read from <code>cloudInstances</code>. Government-cloud items first, then the most material ⏳ not-yet-in-GCC pipeline items.</p>
+
+<table>
+<thead><tr><th>Date</th><th>Feature</th><th>GCC status</th><th>Phase</th><th>Source</th></tr></thead>
+<tbody>
+
+<tr><td>2026-11-11</td><td>Microsoft 365 Copilot — Federated Copilot Connectors in M365 Copilot (third-party content federation into Copilot answers reaches gov clouds)</td><td>✅ GCC · GCC High · DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569212">Roadmap 569212</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft 365 Copilot — MCP-Based Agent Enablement for U.S. Government Clouds (declarative + MCP-wired agents can run in GCC/GCC High/DoD)</td><td>✅ GCC · GCC High · DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=564607">Roadmap 564607</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft Purview — Endpoint DLP view-only access via View-Only Device Management role</td><td>✅ GCC · GCC High · DoD</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=577187">Roadmap 577187</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft Purview — Information Protection: auto-labeling scale increase for SharePoint and OneDrive</td><td>✅ GCC · GCC High · DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=571309">Roadmap 571309</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft Viva — Viva Glint: Copilot-assisted commenting in survey taking</td><td>✅ GCC (+ Worldwide)</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560595">Roadmap 560595</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft 365 Copilot — Copilot Extensibility: custom engine agents available to GCC High users</td><td>🔶 GCC High only</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=503771">Roadmap 503771</a></td></tr>
+
+<tr><td>2026-11-05</td><td>Microsoft Viva — Insights and Copilot Analytics in GCC and GCC High</td><td>✅ GCC · GCC High</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=578868">Roadmap 578868</a></td></tr>
+
+<tr><td>2026-11-03</td><td>Microsoft 365 Copilot — New usage reports for Copilot Search, Connectors, and Agents for U.S. gov clouds</td><td>✅ GCC · GCC High · DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=573170">Roadmap 573170</a></td></tr>
+
+<tr><td>2026-11-03</td><td>Microsoft 365 Copilot — Edit your document with Copilot in PowerPoint in Government Clouds</td><td>🔶 DoD only (GCC still pipeline)</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=566702">Roadmap 566702</a></td></tr>
+
+<tr><td>2026-11-03</td><td>Microsoft 365 Copilot — Edit with Copilot in Excel (Web, Win32, Mac) for GCC</td><td>✅ GCC · GCC High · DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=542181">Roadmap 542181</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft 365 Copilot — Copilot Cowork: access Business Applications with Work IQ</td><td>⏳ Not yet in GCC</td><td>Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=573293">Roadmap 573293</a></td></tr>
+
+<tr><td>2026-11-11</td><td>Microsoft 365 Copilot — Copilot Chat in OneNote can create, edit, and refine content</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=573446">Roadmap 573446</a></td></tr>
+
+<tr><td>2026-11-06</td><td>Microsoft 365 — Frontier expands to public previews in Teams, Outlook, OneDrive, and SharePoint</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=578225">Roadmap 578225</a></td></tr>
+
+<tr><td>2026-11-06</td><td>Microsoft 365 Copilot — Realtime voice interactions in Word and PowerPoint</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=487852">Roadmap 487852</a></td></tr>
+
+<tr><td>2026-11-05</td><td>Microsoft Copilot Studio — Use MCP-compliant tools in agent workflows</td><td>⏳ Not yet in GCC</td><td>Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562221">Roadmap 562221</a></td></tr>
+
+<tr><td>2026-11-05</td><td>Microsoft 365 Copilot — Accounting skills (financial-task agents in Copilot chat)</td><td>⏳ Not yet in GCC</td><td>Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=578864">Roadmap 578864</a></td></tr>
+
+<tr><td>2026-11-05</td><td>Outlook — Inline chat for email drafting with Copilot</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=570440">Roadmap 570440</a></td></tr>
+
+<tr><td>2026-11-04</td><td>Microsoft Teams — Enhanced Copilot and AI controls for meetings (tenant-level Copilot-in-meeting governance)</td><td>⏳ Not yet in GCC</td><td>Targeted Release</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=577399">Roadmap 577399</a></td></tr>
+
+<tr><td>2026-11-04</td><td>Microsoft Teams — Ask Copilot from Search on Mobile</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=571299">Roadmap 571299</a></td></tr>
+
+<tr><td>2026-11-04</td><td>Microsoft Teams — Copilot in the Queues app on Mobile</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=578859">Roadmap 578859</a></td></tr>
+
+</tbody>
+</table>
+
+<p><strong>Pipeline watch:</strong> the single most significant ⏳ item is Roadmap 577399 — <em>Teams: Enhanced Copilot and AI controls for meetings</em>. It introduces tenant-level governance of in-meeting Copilot, the exact control GCC admins have been asking Microsoft for since the Teams Copilot preview window opened. Worldwide only today; watch for a GCC-cloud tag on the roadmap item in the next biweekly release notes.</p>
+
+<h2>ChatGPT Enterprise</h2>
+<p>From the authoritative help.openai.com release-notes capture appended to this run. The Enterprise &amp; Edu and Business release-note pages both returned <code>UNAVAILABLE</code> in the headless fetch; the shared ChatGPT release notes were <code>OK</code> and are the source below. WebSearch fallback was used to confirm nothing Enterprise-admin-specific published inside the window — none was found.</p>
+
+<table>
+<thead><tr><th>Date</th><th>Feature</th><th>Scope</th><th>State</th><th>Source</th></tr></thead>
+<tbody>
+
+<tr><td>2026-11-10</td><td>Business Hub in ChatGPT — business owners and authorized representatives can claim their business in ChatGPT; access is gated on Persona identity verification.</td><td>Admin / Workspace</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">help.openai.com release notes</a></td></tr>
+
+<tr><td>2026-11-10</td><td>Retirement of Advanced Voice and Standard Voice on 2026-12-11; GPT-Live becomes the sole voice model. Live video and screen-sharing stay on Advanced Voice until GPT-Live covers them.</td><td>User</td><td>Dated change (effective 2026-12-11)</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">help.openai.com release notes</a></td></tr>
+
+<tr><td>2026-11-04</td><td>ChatGPT Images 2.6 — faster generation, better detail preservation across edits, GIF creation, and saved reference images (<code>@name</code>-style image recall across chats).</td><td>User</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">help.openai.com release notes</a></td></tr>
+
+</tbody>
+</table>
+
+<h2>Betas &amp; Previews Worth Tracking</h2>
+<ul>
+<li><strong>Copilot Studio: MCP-compliant tools in agent workflows</strong> (Preview, Worldwide). Puts the same MCP tool contract behind Studio agents that the GA gov-cloud enablement just unlocked for Copilot (Roadmap 564607). Worth pairing — adoption will arrive as GCC/GCC High within one or two biweekly cycles. Source: <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=562221">Roadmap 562221</a>.</li>
+<li><strong>M365 Copilot Accounting skills</strong> (Preview, Worldwide) — the first explicitly finance-scoped skill surface in M365 Copilot. Flagged because county finance teams often ask about Copilot for AP/GL tasks. Source: <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=578864">Roadmap 578864</a>.</li>
+<li><strong>Purview DSPM — Copilot Readiness and Data Explorer</strong> (Preview, Worldwide; Roadmap 571157). A dedicated Copilot-readiness surface inside Purview DSPM; useful ahead of the Manatee Copilot rollout even though it is not yet in GCC.</li>
+<li><strong>Purview DLP for Microsoft Cowork</strong> (Preview, Worldwide; Roadmap 570845) — extends DLP policy enforcement into the Cowork surface.</li>
+<li><strong>ChatGPT Images 2.6</strong> (rolling out) — see Enterprise table.</li>
+</ul>
+
+<h2>Sources</h2>
+<p><strong>Microsoft 365 Copilot</strong></p>
+<ul>
+<li><a href="https://www.microsoft.com/releasecommunications/api/v1/m365">M365 public roadmap JSON feed</a> — fetched 2026-11-11 13:02 UTC via <code>mcp__godmode__http_request</code> (browser-UA headers). 2,294 items total; 73 Copilot-tagged items inside the 10-day window; filtered deterministically by <code>products[]</code>, title, and description.</li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Microsoft 365 Copilot — What's new (Learn)</a> — narrative release notes; not re-fetched this run (roadmap feed was sufficient and more precisely dated).</li>
+</ul>
+<p><strong>ChatGPT Enterprise</strong></p>
+<ul>
+<li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT Release Notes (shared)</a> — <code>STATUS: OK</code> in the appended headless fetch. Dated entries used verbatim.</li>
+<li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu Release Notes</a> — <code>STATUS: UNAVAILABLE</code> (Cloudflare/timeout) in this run; no Enterprise-specific items captured. Admin-item coverage flagged as thin.</li>
+<li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">ChatGPT Business Release Notes</a> — <code>STATUS: UNAVAILABLE</code>.</li>
+</ul>
+
+<div class="footer">
+Auto-generated by <code>~/Projects/copilot-chatgpt-feature-brief/generate.sh</code>, twice weekly (Wed + Sat 07:00). GCC availability is read from the public M365 roadmap feed and reflects Microsoft's published rollout, not the Manatee tenant's admin message center. ChatGPT Enterprise/Edu admin coverage was thin this run because the authoritative release-notes pages timed out; next Saturday run should re-confirm.
+</div>
+
+</body>
+</html>
