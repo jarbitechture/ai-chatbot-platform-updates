@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copilot + ChatGPT Enterprise — Feature Delta 2026-11-21</title>
+<style>
+  :root { --fg: #1a1a1a; --muted: #555; --accent: #1a5fb4; --bg: #fafaf7; --code-bg: #eef1f5; --rule: #d3d8e0; }
+  html { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; color: var(--fg); background: var(--bg); }
+  body { max-width: 920px; margin: 2rem auto 4rem; padding: 0 1.5rem; line-height: 1.55; }
+  h1 { font-size: 1.9rem; border-bottom: 2px solid var(--fg); padding-bottom: .4rem; margin-bottom: 0; }
+  .subtitle { color: var(--muted); margin-top: .3rem; font-size: .95rem; }
+  h2 { margin-top: 2.4rem; font-size: 1.35rem; border-bottom: 1px solid var(--rule); padding-bottom: .25rem; }
+  code, pre { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .88rem; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; width: 100%; font-size: .92rem; }
+  th, td { padding: .45rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); font-weight: 600; }
+  .callout { background: #e8f0fb; border-left: 3px solid #1a5fb4; padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; }
+  .empty { background: var(--code-bg); padding: .7rem 1rem; margin: 1rem 0; font-size: .93rem; color: var(--muted); }
+  .footer { margin-top: 4rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .85rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>Copilot + ChatGPT Enterprise — Feature Delta <span class="subtitle">2026-11-21 · Wed/Sat brief</span></h1>
+
+<div class="callout">
+Three Copilot items landed in GCC this window that matter for Manatee: <strong>Federated Copilot Connectors</strong> and <strong>MCP-based agent enablement</strong> are both GA across GCC / GCC High / DoD (both dated 2026-11-11), and a new <strong>Copilot entry point in Classic Outlook</strong> reached GCC on 2026-11-17. On the ChatGPT side, two Enterprise-relevant admin changes shipped in the Business workspace (SSO exemptions for external members, admin-driven email changes); the Enterprise &amp; Edu release-notes page was unreachable this run and is called out below.
+</div>
+
+<h2>Microsoft 365 Copilot (GCC tenant)</h2>
+<p>Filtered to items whose roadmap <code>modified</code> or <code>created</code> date falls between 2026-11-11 and 2026-11-21. Sorted newest first.</p>
+<table>
+<thead><tr><th>Date</th><th>Feature</th><th>GCC status</th><th>Phase</th><th>Roadmap</th></tr></thead>
+<tbody>
+<tr><td>2026-11-21</td><td>Manage workforce requests in Microsoft 365 Copilot — MCP tools let supervisors approve/reject time-off and review shift-swap/bid requests in Dynamics 365 WEM via natural language.</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=581992">581992</a></td></tr>
+<tr><td>2026-11-20</td><td>Teams Facilitator — AI-powered notes for in-person meetings in Teams Rooms on Android.</td><td>✅ GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=560700">560700</a></td></tr>
+<tr><td>2026-11-19</td><td>Copilot connectors — improved content freshness via webhook-led notifications so grounded answers reflect recent changes faster.</td><td>✅ GCC, GCC High</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=505442">505442</a></td></tr>
+<tr><td>2026-11-19</td><td>Copilot Studio — run Python code as a step inside workflows.</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=580866">580866</a></td></tr>
+<tr><td>2026-11-19</td><td>Copilot Studio — share workflows with co-owners for collaborative editing.</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=580864">580864</a></td></tr>
+<tr><td>2026-11-19</td><td>Microsoft 365 Copilot — Copilot Workspaces updates (shared spaces for agent-grounded work).</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=579889">579889</a></td></tr>
+<tr><td>2026-11-19</td><td>Self-serve sync connectors in Microsoft 365 Copilot — admins can stand up new data connectors without filing a ticket.</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=568788">568788</a></td></tr>
+<tr><td>2026-11-17</td><td>Outlook — new Copilot entry point in Classic Outlook.</td><td>✅ GCC, GCC High, DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=567007">567007</a></td></tr>
+<tr><td>2026-11-17</td><td>Agent 365 — Business Analytics experience for agent usage, outcomes, and cost reporting.</td><td>✅ GCC, GCC High, DoD (also WW)</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=577548">577548</a></td></tr>
+<tr><td>2026-11-17</td><td>Word — legal plugin (contract drafting/review aids inside Word).</td><td>✅ GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=571885">571885</a></td></tr>
+<tr><td>2026-11-17</td><td>Microsoft 365 Copilot — Service Agent, a dedicated support-specialist agent inside Copilot.</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=577829">577829</a></td></tr>
+<tr><td>2026-11-17</td><td>Microsoft 365 Copilot — Copilot Code (code-authoring agent surface).</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=571887">571887</a></td></tr>
+<tr><td>2026-11-17</td><td>Work IQ — Granular MCP policies (scoped admin control over MCP tool exposure).</td><td>⏳ Not yet in GCC</td><td>GA + Preview</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=570671">570671</a></td></tr>
+<tr><td>2026-11-13</td><td>Copilot Chat in OneNote can create, edit, and refine content in place.</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=573446">573446</a></td></tr>
+<tr><td>2026-11-12</td><td>Delegated prompt publishing — admins can delegate who may publish organization prompts.</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569425">569425</a></td></tr>
+<tr><td>2026-11-11</td><td>Federated Copilot Connectors in Microsoft 365 Copilot — connect external indexes without reingest.</td><td>✅ GCC, GCC High, DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=569212">569212</a></td></tr>
+<tr><td>2026-11-11</td><td>MCP-Based Agent Enablement for U.S. Government Clouds — Copilot agents can call MCP tool servers from GCC / GCC High / DoD.</td><td>✅ GCC, GCC High, DoD</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=564607">564607</a></td></tr>
+<tr><td>2026-11-11</td><td>Custom engine agents available to users in GCC High.</td><td>🔶 GCC High only</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=503771">503771</a></td></tr>
+<tr><td>2026-11-11</td><td>Copilot People Connectors — people-data ingestion with differentiated access control.</td><td>⏳ Not yet in GCC</td><td>GA</td><td><a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?id=561326">561326</a></td></tr>
+</tbody>
+</table>
+
+<p><strong>Pipeline watch (⏳ not yet in GCC):</strong> <em>Microsoft 365 Copilot Service Agent</em> (roadmap 577829, 2026-11-17) is the most consequential for a county service-desk pattern — it is in Preview on commercial and has no government-cloud tag yet.</p>
+
+<h2>ChatGPT Enterprise</h2>
+<p>Primary source — the <em>Enterprise &amp; Edu release notes</em> page — timed out this run (headless fetch logged <code>Timeout 45000ms</code>). The Business workspace and shared ChatGPT feeds fetched cleanly; items below are drawn from those and are the signals Enterprise admins should expect to see or already see parity on. No Enterprise-only entries are claimed.</p>
+<table>
+<thead><tr><th>Date</th><th>Feature</th><th>Scope</th><th>State</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>2026-11-20</td><td>ChatGPT Space rolling out to Plus — collaborative pages/presentations, auto-updating from connected apps; Enterprise users already had access.</td><td>User</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-19</td><td>SSO exemptions for external workspace members — owners choose <em>Allow login without SSO</em> or <em>Follow workspace SSO policy</em> under Workspace login; existing externals grandfathered, new externals not exempt by default.</td><td>Admin</td><td>GA (Business)</td><td><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">Business notes</a></td></tr>
+<tr><td>2026-11-19</td><td>Dots for Business Standard — one personal dot per eligible member in US workspaces.</td><td>Workspace</td><td>Rolling out (Business Standard, US)</td><td><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">Business notes</a></td></tr>
+<tr><td>2026-11-19</td><td>New mobile experience — dot tab, pin favorites (Codex, Projects, Images); starts with Pro, subset of Plus; excludes EEA, UK, CH, KR.</td><td>User</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-18</td><td>Accounting plugin via computer-use desktop app — <strong>in Enterprise workspaces an admin must approve Accounting before members can install it.</strong></td><td>Admin + User</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-18</td><td>Live Dictation — streaming speech-to-text, 10-minute recording cap removed; iOS, Android, web, desktop, all plans.</td><td>User</td><td>GA</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-17</td><td>GPT-6.2 Astra and Sol in Business workspaces — in Work and Codex desktop; access depends on seat and workspace permissions. Regular Chat keeps existing models.</td><td>Workspace</td><td>Preview (Business)</td><td><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">Business notes</a></td></tr>
+<tr><td>2026-11-16</td><td>ChatGPT for Clinicians — improved clinical search and healthcare plugins.</td><td>User (vertical)</td><td>GA</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-13</td><td>ChatGPT Wallet — agentic checkout; Pro, US-only, biometric approval per purchase.</td><td>User (Pro)</td><td>Rolling out</td><td><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT notes</a></td></tr>
+<tr><td>2026-11-12</td><td>Change users' email addresses in Admin Console — global admins can update eligible non-SCIM users; both domains must be verified; 2 per rolling 24h, 20 lifetime; SCIM users still update via IdP.</td><td>Admin</td><td>GA (Business)</td><td><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">Business notes</a></td></tr>
+</tbody>
+</table>
+
+<h2>Betas &amp; Previews Worth Tracking</h2>
+<ul>
+<li><strong>GPT-6.2 Astra and Sol</strong> (ChatGPT, 2026-11-17) — in preview in Work and Codex desktop in Business workspaces; watch whether the Enterprise/Edu feed surfaces parity in the next run.</li>
+<li><strong>Microsoft 365 Copilot Service Agent</strong> (Copilot, 2026-11-17) — Preview on commercial, no government-cloud tag yet; relevant to county service-desk workflows.</li>
+<li><strong>Copilot Code</strong> (Copilot, 2026-11-17) — Preview on commercial only.</li>
+<li><strong>Work IQ — Granular MCP policies</strong> (Copilot, 2026-11-17) — admin-side MCP policy surface; Preview, commercial only.</li>
+<li><strong>Copilot Workspaces updates</strong> (Copilot, 2026-11-19) — Preview, commercial only.</li>
+<li><strong>Self-serve sync connectors</strong> (Copilot, 2026-11-19) — Preview, commercial only.</li>
+<li><strong>Dots for Business Standard</strong> (ChatGPT, 2026-11-19) — gradual US rollout.</li>
+</ul>
+
+<h2>Sources</h2>
+<p><strong>Microsoft 365 Copilot</strong></p>
+<ul>
+<li><a href="https://www.microsoft.com/releasecommunications/api/v1/m365">M365 public roadmap feed</a> — read 2026-11-21 13:37 UTC, 2401 items, 53 Copilot-tagged inside the 10-day cap. Authoritative source for <code>cloudInstances</code> (GCC tagging).</li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes">Microsoft 365 Copilot release notes (Learn)</a> — narrative source; GCC/cloud scope is not reliable here and was cross-referenced against the roadmap feed by Roadmap ID.</li>
+</ul>
+<p><strong>ChatGPT Enterprise (OpenAI)</strong></p>
+<ul>
+<li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes">ChatGPT Enterprise &amp; Edu release notes</a> — <em>unavailable this run</em> (headless fetch timeout at 45s); no Enterprise-only entries claimed.</li>
+<li><a href="https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes">ChatGPT Business release notes</a> — entries dated 2026-11-19, 2026-11-17, 2026-11-12.</li>
+<li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes (shared)</a> — entries dated 2026-11-20, 2026-11-19, 2026-11-18, 2026-11-16, 2026-11-13.</li>
+</ul>
+
+<div class="footer">
+Auto-generated by <code>~/Projects/copilot-chatgpt-feature-brief/generate.sh</code>, twice weekly (Wed + Sat 07:00 ET). GCC availability is read from the public Microsoft 365 roadmap feed's <code>cloudInstances</code> tag and reflects Microsoft's published rollout — not the Manatee County tenant's Message Center. Confirm against your admin message center before any user-visible change.
+</div>
+
+</body>
+</html>
